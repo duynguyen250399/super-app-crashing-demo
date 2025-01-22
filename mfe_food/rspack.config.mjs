@@ -15,7 +15,6 @@ export default (env) => {
     bundleFilename = undefined,
     sourceMapFilename = undefined,
     assetsPath = undefined,
-    entry = './index.js',
   } = env;
 
   if (!platform) {
@@ -28,7 +27,7 @@ export default (env) => {
     mode,
     devtool: false,
     context,
-    entry: entry,
+    entry: {},
     resolve: {
       ...Repack.getResolveOptions(platform),
     },
@@ -107,7 +106,7 @@ export default (env) => {
           '.': './App',
         },
         dts: false,
-        getPublicPath: `return "http://localhost:8083/${platform}/"`,
+        getPublicPath: `return "http://localhost:8082/${platform}/"`,
         shared: {
           react: {
             singleton: true,

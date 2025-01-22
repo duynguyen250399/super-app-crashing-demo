@@ -104,7 +104,7 @@ export default (env) => {
         name: 'host',
         filename: 'host.container.js.bundle',
         remotes: {
-          mfeFood: `mfeFood@http://localhost:8083/${platform}/mf-manifest.json`,
+          mfeFood: `mfeFood@http://localhost:8082/${platform}/mf-manifest.json`,
         },
         dts: false,
         shared: {
