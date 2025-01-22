@@ -21,7 +21,7 @@
     "@babel/plugin-syntax-typescript": "7.25.9",
     "@babel/preset-env": "7.25.3",
     "@babel/runtime": "7.25.0",
-    "@callstack/repack": "5.0.0-rc.8",
+    "@callstack/repack": "5.0.0-rc.5",
     "@react-native-community/cli": "15.0.1",
     "@react-native-community/cli-platform-android": "15.0.1",
     "@react-native-community/cli-platform-ios": "15.0.1",
