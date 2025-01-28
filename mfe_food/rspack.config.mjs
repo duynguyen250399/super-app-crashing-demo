@@ -49,7 +49,6 @@ export default (env) => {
         Repack.REACT_NATIVE_LOADING_RULES,
         Repack.NODE_MODULES_LOADING_RULES,
         Repack.FLOW_TYPED_MODULES_LOADING_RULES,
-        Repack.REACT_NATIVE_CODEGEN_RULES,
         {
           test: /\.[jt]sx?$/,
           type: 'javascript/auto',
@@ -61,6 +60,10 @@ export default (env) => {
                 targets: { 'react-native': '0.74' },
               },
               jsc: {
+                assumptions: {
+                  setPublicClassFields: true,
+                  privateFieldsAsProperties: true,
+                },
                 externalHelpers: true,
                 transform: {
                   react: {
@@ -97,8 +100,8 @@ export default (env) => {
         },
       }),
       new Repack.plugins.ModuleFederationPluginV2({
-        name: 'mfe-food',
-        filename: 'mfe-food.container.js.bundle',
+        name: 'mfeFood',
+        filename: 'mfeFood.container.js.bundle',
         exposes: {
           '.': './App',
         },
